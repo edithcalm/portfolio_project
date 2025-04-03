@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: poppins, sans-serif;
+    box-sizing: border-box;
+}
+body{
+ background-color:#081b29;
+
+}
+.header{
+   position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: solid #0d2538;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    z-index: 100;
+}
+.logo{
+    font-size: 25px;
+    color:white;
+    text-decoration: none;
+    font-weight: 600;
+}
+.navbar a{
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    }
+.navbar a:hover,
+ .navbar a.active{
+    color: #23ecb3;
+    border-bottom: 2px solid #23ecb3;
+    padding: 5px 10px;
+    border-radius: 5px;
+    }
+    .home{
+       height: 100vh;
+       display: flex;
+       align-items: center;
+       padding: 0 10%;
+    }
+    /* Add styles or remove this ruleset */
+    .home-content{
+        max-width: 600px;
+      max-width: 600px;
+    }
+    .home-content h1 {
+      font-size: 56px;
+      font-weight: 600;
+    }
+    .home-content h3{
+      font-size: 32px;
+        font-weight: 600;
+        color:aqua;
+    }
+    .home-content p{
+      font-size: 18px;
+      line-height: 30px;
+      margin: 20px 40px;
+    }
+.h-icons{
+    position: absolute;
+    width: 170px;
+    bottom: 40px; 
+    display: flex;
+    justify-content: space-between;
+}
+.h-icons a{
+    color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: transparent;
+    border: 2px solid aqua;
+    font-size: 10px;
+    text-decoration: none;
+
+}
+.h-icons a::before{
+    content: attr(data-icon);
+    font-size: 20px;
+    margin-right: 5px;
+    color: aqua;
+    transition: all 0.3s ease;
+    
+}
+
+
+
+
