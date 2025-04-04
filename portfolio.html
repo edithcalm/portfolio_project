@@ -6,6 +6,8 @@
     <title>Edith's Portfolio website </title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 </head>
 <body>
     <header class="header">
@@ -84,21 +86,45 @@
                 <div class="project-image"></div>
                 <div class="project-info">
                     <h2>Project Title</h2>
-                    <p>Short description of the project.</p>
+                    <p>Oooppss!! I'm still cooking!!! Stay tuned </p>
                 </div>
             </div>
             
         
-      <a href="Edith resume 1.pdf" class="cv-download" download>Download My CV</a>
+            <a href="Edith resume 1.pdf" download class="download-btn">Download My CV</a>
     </section>
     
-        <section id="contact" class="contact">
-            <h1>Contact</h1>
-            <p>Feel free to reach out to me for collaborations or inquiries at <a href="email:edithkaranja02@gmail.com">edithkaranja02@gmail.com</a>.</p>
-        </section>
-  
+    <section id="contact" class="contact">
+        <h1>Contact</h1>
+        <p>Feel free to reach out to me for collaborations or inquiries at:</p>
+        
+        <div class="contact-info">
+            <p><i class="fas fa-envelope"></i> <a href="mailto:edithkaranja02@gmail.com">edithkaranja02@gmail.com</a></p>
+            <p><i class="fas fa-phone-alt"></i> <a href="tel:+254 721606409">+254 721606409</a></p>
+        </div>
+    
+        <form action="your_form_handling_script.php" method="POST" class="contact-form">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            <div>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </section>
     <footer>
-        <p>&copy; 2023 Your Name. All rights reserved.</p>
+        <p>&copy; 2025 Edith Karanja  All rights reserved.</p>
     </footer>
 </body>
 </html>
