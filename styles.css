@@ -50,17 +50,17 @@ body{
     border-radius: 5px;
     }
     .home{
-        height: 150vh;
+        height: 100vh;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         padding: 0 10%;
-        gap: 40px;
+        margin: 0 auto;
         flex-wrap: wrap;
         text-align: center;
         position: relative;
     }
-        
+
          .home-img img {
                 width: 200px;
                 height: 200px;
@@ -73,23 +73,42 @@ body{
         }
         /* Add styles or remove this ruleset */
         .home-content{
-            max-width: 600px;
           max-width: 600px;
+          padding: 20px;
+          margin: 0 auto;
         }
         .home-content h1 {
-          font-size: 56px;
+          font-size: 50px;
           font-weight: 600;
+          color: aqua
         }
         .home-content h3{
           font-size: 32px;
             font-weight: 600;
             color:burlywood;
         }
-        .home-content p{
-          font-size: 18px;
-          line-height: 30px;
-          margin: 20px 40px;
-          text-align: left;
+        .home-content p
+        {
+       font-size: 1.6rem;
+         font-weight: 400;
+       line-height: 1.8;
+       color: whitesmoke;
+       padding: 0 10px;
+       
+
+        }
+        .home-content a{
+            text-decoration: none;
+            color: black;
+            background: aqua;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+        .home-content a:hover{
+            background: #deb887; /* Burlywood */
+            color: black;
         }
     .h-icons{
         position: absolute;
@@ -151,7 +170,8 @@ body{
     font-size: 2.5rem;
     color: burlywood;
     margin-bottom: 20px;
-    font-weight: 700;
+    font-weight: 600;
+    border-bottom: 2px solid aqua;
   }
   
   .about p {
@@ -296,7 +316,8 @@ body{
 }
 
 .education h1 {
-    font-size: 36px;
+    font: size 50px;
+    font-weight: 600;
     margin-bottom: 40px;
     color: burlywood;
     border-bottom: 2px solid aqua;
