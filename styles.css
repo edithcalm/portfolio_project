@@ -55,11 +55,11 @@ body {
 
 /* Home Section */
 .home {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 10%;
+    padding: 120px 10% 60px;
     margin: 0 auto;
     flex-wrap: wrap;
     text-align: center;
@@ -163,11 +163,13 @@ body {
     padding: 80px 20px;
     text-align: left;
     max-width: 800px;
-    margin: 100px auto 60px;
+    margin: 0 auto 60px;
     border-radius: 16px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
 }
 
 .about h1 {
