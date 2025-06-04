@@ -1,23 +1,23 @@
-   * {
-
-        margin: 0;
-        padding: 0;
-        font-family: poppins, sans-serif;
-        box-sizing: border-box;
-
-
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
 }
 
 html {
     scroll-behavior: smooth;
 }
-body{
- background-color:#081b29;
- color: white;
 
+body {
+    background-color: #081b29;
+    color: white;
 }
-.header{
-   position:absolute;
+
+/* Header and Navigation */
+.header {
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -28,164 +28,167 @@ body{
     padding: 20px 10%;
     z-index: 100;
 }
-.logo{
+
+.logo {
     font-size: 25px;
-    color:black;
+    color: black;
     text-decoration: none;
     font-weight: 600;
 }
-.navbar a{
+
+.navbar a {
     color: black;
     text-decoration: none;
     margin-left: 30px;
     font-size: 18px;
     font-weight: 500;
     transition: all 0.3s ease;
-    }
+}
+
 .navbar a:hover,
- .navbar a.active{
-    color:black;
+.navbar a.active {
+    color: black;
     border-bottom: 2px solid aqua;
     padding: 5px 10px;
     border-radius: 5px;
-    }
-    .home{
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0 10%;
-        margin: 0 auto;
-        flex-wrap: wrap;
-        text-align: center;
-        position: relative;
-    }
+}
 
-         .home-img img {
-                width: 200px;
-                height: 200px;
-                object-fit: cover;
-                border-radius: 50%;
-                box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-                border: 4px solid burlywood; 
-                align-items: center;
-                
-        }
-        /* Add styles or remove this ruleset */
-        .home-content{
-          max-width: 600px;
-          padding: 20px;
-          margin: 0 auto;
-        }
-        .home-content h1 {
-          font-size: 50px;
-          font-weight: 600;
-          color: aqua
-        }
-        .home-content h3{
-          font-size: 32px;
-            font-weight: 600;
-            color:burlywood;
-        }
-        .home-content p
-        {
-       font-size: 1.6rem;
-         font-weight: 400;
-       line-height: 1.8;
-       color: whitesmoke;
-       padding: 0 10px;
-       
+/* Home Section */
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    text-align: center;
+    position: relative;
+}
 
-        }
-        .home-content a{
-            text-decoration: none;
-            color: black;
-            background: aqua;
-            padding: 12px 20px;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-        }
-        .home-content a:hover{
-            background: #deb887; /* Burlywood */
-            color: black;
-        }
-    .h-icons{
-        position: absolute;
-        width: 170px;
-        bottom: 40px; 
-        display: flex;
-        justify-content: space-between;
-    }
-    .h-icons a{
-        color: burlywood;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background: transparent;
-        border: 2px solid burlywood;
-        font-size: 10px;
-        text-decoration: none;
-    
-    }
-    .h-icons a::before{
-        content: attr(data-icon);
-        font-size: 20px;
-        margin-right: 5px;
-        color: burlywood;
-        transition: all 0.3s ease;
-        
-    }
-    .h-icons a:hover::before{
-        transform: translateY(-5px);
-        color: #23ecb3;
-    }
-    
-    .h-icons a:hover {
-        color: aqua;
-    }
-    .about {
-        padding: 100px 10% 60px;
-        background-color: #081b29;
-        color: white;
-    }
-    
+.home-img img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    border: 4px solid burlywood;
+}
 
+.home-content {
+    max-width: 600px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.home-content h1 {
+    font-size: 50px;
+    font-weight: 600;
+    color: aqua;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 600;
+    color: burlywood;
+}
+
+.home-content p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.8;
+    color: whitesmoke;
+    padding: 0 10px;
+}
+
+.home-content a {
+    text-decoration: none;
+    color: black;
+    background: aqua;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.home-content a:hover {
+    background: #deb887;
+    color: black;
+}
+
+/* Social Icons */
+.h-icons {
+    position: absolute;
+    width: 170px;
+    bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.h-icons a {
+    color: burlywood;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: transparent;
+    border: 2px solid burlywood;
+    font-size: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.h-icons a::before {
+    content: attr(data-icon);
+    font-size: 20px;
+    margin-right: 5px;
+    color: burlywood;
+    transition: all 0.3s ease;
+}
+
+.h-icons a:hover::before {
+    transform: translateY(-5px);
+    color: #23ecb3;
+}
+
+.h-icons a:hover {
+    color: aqua;
+}
+
+/* About Section */
 .about {
     background: #081b29;
     padding: 80px 20px;
     text-align: left;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 100px auto 60px;
     border-radius: 16px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transition: all 0.3s ease;
-  }
-  
-  .about h1{
+}
+
+.about h1 {
     font-size: 2.5rem;
     color: burlywood;
     margin-bottom: 20px;
     font-weight: 600;
     border-bottom: 2px solid aqua;
-  }
-  
-  .about p {
+}
+
+.about p {
     font-size: 1.1rem;
     line-height: 1.8;
     color: whitesmoke;
     padding: 0 10px;
-  }
-  
-  .about strong {
+}
+
+.about strong {
     color: aqua;
     font-weight: 600;
-  }
-
+}
 
 #projects {
     background-color: #081b29;
@@ -450,7 +453,6 @@ body{
         width: 90%;
     }
 }
-
 
 footer {
     text-align: center;
