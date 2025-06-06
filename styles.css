@@ -281,7 +281,7 @@ html {
 }
 
 .home-img img {
-    width: 300px;
+      width: 300px;
     height: 300px;
     object-fit: cover;
     border-radius: 50%;
@@ -649,19 +649,21 @@ html {
     }
 
     .home {
+        min-height: auto;
         flex-direction: column;
-        padding: 6rem 1.5rem 3rem;
+        padding: 5rem 1.5rem 2rem;
+        gap: 2rem;
     }
 
     .home-content {
         max-width: 100%;
-        padding: 1.5rem 1rem;
+        padding: 0;
         text-align: center;
     }
 
     .home-img {
         max-width: 300px;
-        margin: 2rem auto;
+        margin: 1rem auto;
     }
 
     .home-img img {
@@ -700,23 +702,7 @@ html {
     }
 
     .h-icons {
-        position: relative;
-        right: auto;
-        top: auto;
-        transform: none;
-        flex-direction: row;
-        justify-content: center;
-        margin-top: 2rem;
-        gap: 1.5rem;
-    }
-
-    .h-icons a {
-        width: 3rem;
-        height: 3rem;
-    }
-
-    .h-icons a i {
-        font-size: 1.5rem;
+        margin-top: 1rem;
     }
 }
 
@@ -735,20 +721,31 @@ html {
     }
 
     .home {
-        padding: 5rem 1rem 2rem;
+        padding: 4.5rem 1rem 1.5rem;
     }
 
     .home-content {
-        padding: 1rem;
+        padding: 0;
     }
 
     .home-img {
-        max-width: 250px;
+        max-width: 220px;
+        margin: 0.5rem auto;
     }
 
     .home-img img {
         width: 200px;
         height: 200px;
+    }
+
+    .h-icons {
+        margin-top: 0.5rem;
+        gap: 1rem;
+    }
+
+    .h-icons a {
+        width: 2.8rem;
+        height: 2.8rem;
     }
 }
 
