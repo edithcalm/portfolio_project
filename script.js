@@ -2,23 +2,30 @@
 const hamburger = document.querySelector('.hamburger-menu');
 const navbar = document.querySelector('.navbar');
 const overlay = document.querySelector('.mobile-menu-overlay');
-const header = document.querySelector('.header');
-const navLinks = document.querySelectorAll('.navbar a');
+const body = document.body;
 
-hamburger?.addEventListener('click', () => {
+hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     navbar.classList.toggle('active');
     overlay.classList.toggle('active');
-    document.body.classList.toggle('no-scroll');
+    body.classList.toggle('no-scroll');
 });
 
-// Close menu when clicking a link
+// Close mobile menu when clicking outside
+overlay.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    navbar.classList.remove('active');
+    overlay.classList.remove('active');
+    body.classList.remove('no-scroll');
+});
+
+// Close mobile menu when clicking a nav link
 document.querySelectorAll('.navbar a').forEach(link => {
     link.addEventListener('click', () => {
         hamburger.classList.remove('active');
         navbar.classList.remove('active');
         overlay.classList.remove('active');
-        document.body.classList.remove('no-scroll');
+        body.classList.remove('no-scroll');
     });
 });
 
@@ -38,12 +45,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Active section highlight
 const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('.navbar a');
 
 window.addEventListener('scroll', () => {
     let current = '';
+    
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
-        if (window.pageYOffset >= sectionTop - 200) {
+        const sectionHeight = section.clientHeight;
+        if (scrollY >= sectionTop - 200) {
             current = section.getAttribute('id');
         }
     });
@@ -54,6 +64,30 @@ window.addEventListener('scroll', () => {
             link.classList.add('active');
         }
     });
+});
+
+// Header scroll effect
+const header = document.querySelector('.header');
+let lastScroll = 0;
+
+window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    
+    if (currentScroll <= 0) {
+        header.style.background = 'rgba(0, 0, 0, 0.9)';
+        return;
+    }
+    
+    if (currentScroll > lastScroll && currentScroll > 100) {
+        // Scrolling down
+        header.style.transform = 'translateY(-100%)';
+    } else {
+        // Scrolling up
+        header.style.transform = 'translateY(0)';
+        header.style.background = 'rgba(0, 0, 0, 0.95)';
+    }
+    
+    lastScroll = currentScroll;
 });
 
 // Remove loading screen when page is ready
@@ -138,28 +172,6 @@ document.addEventListener('DOMContentLoaded', () => {
         icon.addEventListener('mouseleave', function() {
             this.style.transform = 'translateY(0) scale(1)';
         });
-    });
-
-    // Handle header background on scroll
-    let lastScroll = 0;
-    window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-        
-        if (currentScroll <= 0) {
-            header.classList.remove('scroll-up');
-            return;
-        }
-        
-        if (currentScroll > lastScroll && !header.classList.contains('scroll-down')) {
-            // Scroll Down
-            header.classList.remove('scroll-up');
-            header.classList.add('scroll-down');
-        } else if (currentScroll < lastScroll && header.classList.contains('scroll-down')) {
-            // Scroll Up
-            header.classList.remove('scroll-down');
-            header.classList.add('scroll-up');
-        }
-        lastScroll = currentScroll;
     });
 });
 
@@ -366,13 +378,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
-
-// Close menu when clicking outside
-document.addEventListener('click', (e) => {
-    if (!navbar.contains(e.target) && !hamburger.contains(e.target) && navbar.classList.contains('active')) {
-        hamburger.classList.remove('active');
-        navbar.classList.remove('active');
-        overlay.classList.remove('active');
-        document.body.classList.remove('no-scroll');
-    }
-}); 
