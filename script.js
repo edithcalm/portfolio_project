@@ -66,30 +66,6 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Header scroll effect
-const header = document.querySelector('.header');
-let lastScroll = 0;
-
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll <= 0) {
-        header.style.background = 'rgba(0, 0, 0, 0.9)';
-        return;
-    }
-    
-    if (currentScroll > lastScroll && currentScroll > 100) {
-        // Scrolling down
-        header.style.transform = 'translateY(-100%)';
-    } else {
-        // Scrolling up
-        header.style.transform = 'translateY(0)';
-        header.style.background = 'rgba(0, 0, 0, 0.95)';
-    }
-    
-    lastScroll = currentScroll;
-});
-
 // Remove loading screen when page is ready
 window.addEventListener('load', () => {
     const loader = document.querySelector('.loading');
@@ -377,4 +353,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             behavior: 'smooth'
         });
     });
+});
+
+// Add scroll shadow effect for header
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('.header');
+    if (window.scrollY > 10) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
 });
