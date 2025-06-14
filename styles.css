@@ -172,16 +172,11 @@ html {
 }
 
 @media (max-width: 768px) {
-    .navbar-container {
-        padding: 0 1rem;
-    }
-    .logo {
-        font-size: 2rem;
-    }
     .navbar {
+        display: none;
         position: fixed;
         top: 60px;
-        right: -100%;
+        right: 0;
         width: 80vw;
         height: calc(100vh - 60px);
         background: var(--primary-color);
@@ -194,13 +189,13 @@ html {
         transition: right 0.3s;
         z-index: 101;
         justify-content: flex-start;
-        display: flex;
     }
     .navbar.active {
+        display: flex;
         right: 0;
     }
     .navbar:not(.active) {
-        right: -100%;
+        display: none;
     }
     .navbar a {
         font-size: 1.3rem;
