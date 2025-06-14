@@ -175,12 +175,15 @@ html {
     .navbar-container {
         padding: 0 1rem;
     }
+    .logo {
+        font-size: 2rem;
+    }
     .navbar {
         position: fixed;
-        top: 80px;
+        top: 60px;
         right: -100%;
         width: 80vw;
-        height: calc(100vh - 80px);
+        height: calc(100vh - 60px);
         background: var(--primary-color);
         flex-direction: column;
         align-items: flex-start;
@@ -191,13 +194,41 @@ html {
         transition: right 0.3s;
         z-index: 101;
         justify-content: flex-start;
+        display: flex;
     }
     .navbar.active {
         right: 0;
     }
+    .navbar:not(.active) {
+        right: -100%;
+    }
+    .navbar a {
+        font-size: 1.3rem;
+        padding: 1rem 0;
+        width: 100%;
+        border-radius: 0;
+        border-bottom: 1px solid rgba(0,0,0,0.08);
+        text-align: left;
+    }
     .hamburger-menu {
         display: flex;
         margin-left: auto;
+        width: 44px;
+        height: 44px;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 102;
+    }
+    .hamburger-menu span {
+        width: 32px;
+        height: 4px;
+        margin: 4px 0;
+        background: #000;
+        border-radius: 2px;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
 }
 
